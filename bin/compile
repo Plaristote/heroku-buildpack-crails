@@ -8,5 +8,11 @@ BUILD_DIR=$1
 
 cd $BUILD_DIR
 
+ldd "$1"/bin/server | grep "not found"
+if [ $? -eq 0 ] ; then
+  echo "-----> Some dependencies cannot be found..."
+  exit -1
+fi
+
 echo "-----> Running tests"
-build/tests
+bin/tests
