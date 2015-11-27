@@ -5,13 +5,13 @@ BUILD_DIR=$1
 
 cd $BUILD_DIR
 
-LD_LIBRARY_PATH=$BUILD_DIR/lib:$BUILD_DIR/bin ldd "$1"/bin/server | grep "not found"
-if [ $? -eq 0 ] ; then
-  echo "-----> Some dependencies cannot be found..."
- exit -1
-else
-  echo "-----> Successfully found all the dependencies."
-fi
+#LD_LIBRARY_PATH=$BUILD_DIR/lib:$BUILD_DIR/bin ldd "$1"/bin/server | grep "not found"
+#if [ $? -eq 0 ] ; then
+#  echo "-----> Some dependencies cannot be found..."
+# exit -1
+#else
+#  echo "-----> Successfully found all the dependencies."
+#fi
 
 #echo "-----> Running tests"
 #bin/tests
