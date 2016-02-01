@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # bin/detect <build-dir>
 
-if [[ -f $1/bin/server && -f $1/bin/tests ]]; then
+if [[ -f $1/bin/server ]]; then
   echo "crails" && exit 0
 else
   echo "no" && exit 1
